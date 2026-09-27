@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Реклама в парках Ставрополя — LED-экраны и лавочки</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="headbar">
+    <div class="logo">
+      <span class="l1">Парки Ставрополя</span>
+      <span class="l2" id="logoSub">LED-экраны · Парк Победы</span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню">☰</button>
+    <nav id="mainNav"></nav>
+    <a class="head-cta copy-link" href="tel:+79054141155" data-tooltip="Скопировать номер">+7 (905) 414-11-55</a>
+  </div>
+</header>
+
+<div class="tabbar">
+  <div class="tabbar-inner">
+    <span class="tab-indicator" id="tabIndicator"></span>
+    <button class="tab-btn active" id="tabBtnScreens" onclick="setTab('screens')">LED-экраны</button>
+    <button class="tab-btn" id="tabBtnBenches" onclick="setTab('benches')">Реклама на обьектах парка</button>
+  </div>
+</div>
+
+<div class="pages-wrap" id="pagesWrap">
+
+<div class="page active" id="page-screens">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Наружная реклама · Парк Победы</span>
+      <h1>Реклама там, где <em>гуляет весь&nbsp;город</em></h1>
+      <p class="lead">Три LED-экрана на входе, выходе и центральной площади Парка Победы в Ставрополе. Ваше сообщение видят пешеходы, семьи с детьми и водители на самом посещаемом маршруте отдыха города — каждый день с 7:00 до 23:00.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Оставить заявку</a>
+        <a class="btn btn-ghost" href="#path">Смотреть локации</a>
+      </div>
+      <div class="hero-stats">
+        <div><span class="num">3</span><span class="lbl">формата размещения</span></div>
+        <div><span class="num">3×10</span><span class="lbl">м экран на входе</span></div>
+        <div><span class="num">16ч</span><span class="lbl">эфира ежедневно</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 520 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Иллюстрация парка вечером с рекламным экраном">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#F2A93B" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#F2A93B" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1F362C"/>
+            <stop offset="100%" stop-color="#17261F"/>
+          </linearGradient>
+        </defs>
+        <rect width="520" height="460" fill="url(#sky)" rx="18"/>
+        <circle cx="420" cy="80" r="90" fill="url(#glow)"/>
+        <!-- path -->
+        <path d="M40 420 Q160 340 130 260 Q100 180 220 150 Q340 120 300 60" stroke="#3A5245" stroke-width="26" fill="none" stroke-linecap="round"/>
+        <path d="M40 420 Q160 340 130 260 Q100 180 220 150 Q340 120 300 60" stroke="#2A4237" stroke-width="2" fill="none" stroke-dasharray="4 10" stroke-linecap="round" opacity="0.6"/>
+        <!-- trees -->
+        <g fill="#26402F">
+          <ellipse cx="70" cy="360" rx="26" ry="34"/>
+          <ellipse cx="180" cy="310" rx="20" ry="28"/>
+          <ellipse cx="380" cy="220" rx="30" ry="40"/>
+          <ellipse cx="440" cy="320" rx="24" ry="32"/>
+          <ellipse cx="150" cy="190" rx="18" ry="24"/>
+        </g>
+        <!-- obelisk silhouette -->
+        <g transform="translate(255,90)">
+          <polygon points="0,0 8,10 8,120 -8,120 -8,10" fill="#0F1B15"/>
+          <polygon points="0,0 -8,10 8,10" fill="#0F1B15"/>
+        </g>
+        <!-- screen 1: main entrance, large 3x10m format -->
+        <g transform="translate(66,388)">
+          <rect x="-4" y="0" width="8" height="34" fill="#3A5245"/>
+          <rect x="-40" y="-58" width="80" height="60" rx="5" fill="#0F1B15" stroke="#F2A93B" stroke-width="2"/>
+          <rect x="-34" y="-52" width="68" height="48" rx="2" fill="#F2A93B" opacity="0.9"/>
+        </g>
+        <!-- screens 2: network near attractions, 3x6m each -->
+        <g transform="translate(205,150)">
+          <rect x="-3" y="0" width="6" height="24" fill="#3A5245"/>
+          <rect x="-22" y="-32" width="44" height="34" rx="4" fill="#0F1B15" stroke="#F2A93B" stroke-width="1.5"/>
+          <rect x="-17" y="-27" width="34" height="24" rx="2" fill="#F2A93B" opacity="0.85"/>
+        </g>
+        <g transform="translate(255,178)">
+          <rect x="-3" y="0" width="6" height="20" fill="#3A5245"/>
+          <rect x="-20" y="-28" width="40" height="30" rx="4" fill="#0F1B15" stroke="#F2A93B" stroke-width="1.5"/>
+          <rect x="-15" y="-23" width="30" height="20" rx="2" fill="#F2A93B" opacity="0.85"/>
+        </g>
+        <!-- city-format pylons: compact, on the alley -->
+        <g transform="translate(300,56)">
+          <rect x="-2" y="0" width="4" height="18" fill="#3A5245"/>
+          <rect x="-11" y="-24" width="22" height="26" rx="3" fill="#0F1B15" stroke="#F2A93B" stroke-width="1.2"/>
+          <rect x="-8" y="-20" width="16" height="18" rx="1.5" fill="#F2A93B" opacity="0.8"/>
+        </g>
+        <g transform="translate(322,68)">
+          <rect x="-2" y="0" width="4" height="14" fill="#3A5245"/>
+          <rect x="-10" y="-20" width="20" height="22" rx="3" fill="#0F1B15" stroke="#F2A93B" stroke-width="1.2"/>
+          <rect x="-7" y="-16" width="14" height="15" rx="1.5" fill="#F2A93B" opacity="0.8"/>
+        </g>
+        <!-- ground -->
+        <rect x="0" y="430" width="520" height="30" fill="#0F1B15"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="path-section" id="path">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Три формата размещения</span>
+      <h2>От входа до самой дальней точки аллеи</h2>
+      <p>Конструкции расставлены по нарастанию: крупный экран встречает у входа со стороны Шпаковской, сеть экранов держит внимание у главных аттракционов, а пилоны сити-формата работают точечно вдоль всей прогулочной зоны.</p>
+    </div>
+
+    <div class="stops">
+      <div class="stop-card">
+        <span class="stop-tag">01 · Главный вход</span>
+        <h3>Экран на ул. Шпаковской</h3>
+        <ul class="spec-list">
+          <li><span>Тип</span><span>Цифровой LED-экран</span></li>
+          <li><span>Размер</span><span>≈ 3 × 10 м</span></li>
+          <li><span>Расположение</span><span>Главный вход, со стороны улицы</span></li>
+          <li><span>Эфир</span><span>7:00–23:00</span></li>
+        </ul>
+        <a class="mini-btn" href="#contact">Разместить рекламу →</a>
+      </div>
+      <div class="stop-card">
+        <span class="stop-tag">02 · Центральная аллея и площадь</span>
+        <h3>Сеть видеоэкранов</h3>
+        <ul class="spec-list">
+          <li><span>Тип</span><span>Цифровые видеоэкраны</span></li>
+          <li><span>Размер (каждый)</span><span>3 × 6 м</span></li>
+          <li><span>Расположение</span><span>У самолёта и у колеса обозрения</span></li>
+          <li><span>Эфир</span><span>7:00–23:00</span></li>
+        </ul>
+        <a class="mini-btn" href="#contact">Разместить рекламу →</a>
+      </div>
+      <div class="stop-card">
+        <span class="stop-tag">03 · Прогулочные зоны аллеи</span>
+        <h3>Сити-формат: пилоны</h3>
+        <ul class="spec-list">
+          <li><span>Тип</span><span>Компактные цифровые пилоны</span></li>
+          <li><span>Формат</span><span>Сити-формат</span></li>
+          <li><span>Расположение</span><span>Вдоль центральной аллеи</span></li>
+          <li><span>Эфир</span><span>7:00–23:00</span></li>
+        </ul>
+        <a class="mini-btn" href="#contact">Разместить рекламу →</a>
+      </div>
+    </div>
+
+    <div class="bonus-note">
+      <span>＋</span>
+      <div><b>Все три формата можно комбинировать</b>: крупный экран на входе — для узнаваемости, сеть экранов у аттракционов — для повторного контакта, пилоны сити-формата — для точечных сообщений в течение всей прогулки по аллее.</div>
+    </div>
+  </div>
+</section>
+
+<section class="advantages" id="advantages">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Почему именно парк</span>
+      <h2>Место, которое работает на вашу рекламу</h2>
+    </div>
+    <div class="adv-grid">
+      <div class="adv-cell">
+        <div class="adv-num">01</div>
+        <h3>Пешеходный трафик без пауз</h3>
+        <p>Парк Победы — место семейного отдыха и прогулок в любой день недели: реклама видна и в будни, и по выходным.</p>
+      </div>
+      <div class="adv-cell">
+        <div class="adv-num">02</div>
+        <h3>Видно в любую погоду</h3>
+        <p>Яркое изображение с широким углом обзора заметно и днём, и в сумерках, когда парк особенно людный.</p>
+      </div>
+      <div class="adv-cell">
+        <div class="adv-num">03</div>
+        <h3>Видео, а не просто баннер</h3>
+        <p>Экраны поддерживают текст, изображения и анимацию — динамичный ролик запоминается лучше статичного щита.</p>
+      </div>
+      <div class="adv-cell">
+        <div class="adv-num">04</div>
+        <h3>Оплата за показы</h3>
+        <p>Никаких затрат на печать и монтаж баннеров — бюджет уходит только на эфирное время.</p>
+      </div>
+      <div class="adv-cell">
+        <div class="adv-num">05</div>
+        <h3>Запуск за 24 часа</h3>
+        <p>Стандартный запуск — в течение суток.</p>
+      </div>
+      <div class="adv-cell">
+        <div class="adv-num">06</div>
+        <h3>Гарантия</h3>
+        <p>Мы даем гарантию на размещение.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="steps">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Как это устроено</span>
+      <h2>Четыре шага до эфира в парке</h2>
+    </div>
+    <div class="steps-list">
+      <div class="step-row">
+        <div class="step-idx">01</div>
+        <div>
+          <h3>Заявка и подбор экрана</h3>
+          <p>Оставляете контакты — подбираем экран в парке под ваш бюджет и задачи: вход, площадь, выход или все сразу.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-idx">02</div>
+        <div>
+          <h3>Договор</h3>
+          <p>Согласовываем условия размещения и заключаем договор — юридическим лицам доступен безналичный расчёт.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-idx">03</div>
+        <div>
+          <h3>Макет</h3>
+          <p>Присылаете готовый ролик или изображение — либо мы разработаем его сами: от 500 ₽ за статику, от 1000 ₽ за видео.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-idx">04</div>
+        <div>
+          <h3>Эфир и фотоотчёт</h3>
+          <p>Запускаем показ на выбранном экране, присылаем фотоотчёт в реальном времени и меняем контент бесплатно по запросу.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="techspecs" id="specs">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Для дизайнеров и подрядчиков</span>
+      <h2>Требования к рекламным материалам</h2>
+    </div>
+    <p class="section-lead">Если материалы уже есть — сверьтесь с параметрами ниже. Если нет — их подготовят наши дизайнеры.</p>
+    <div class="table-scroll">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>Экран</th>
+            <th>Разрешение</th>
+            <th>Формат видео</th>
+            <th>Частота кадров</th>
+            <th>Графика</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Вход / Выход (1,2×1,8 м)</td>
+            <td>320 × 440 px</td>
+            <td>AVI, MKV, MP4, MOV, 3GP</td>
+            <td>30 fps</td>
+            <td>PNG, JPEG, GIF, BMP</td>
+          </tr>
+          <tr>
+            <td>Центральная площадь (6×3 м)</td>
+            <td>720 × 360 px</td>
+            <td>AVI, MKV, MP4, MOV, TS, FLV</td>
+            <td>1080p@60fps</td>
+            <td>PNG, JPEG, GIF, BMP</td>
+          </tr>
+          <tr>
+            <td>Медиафасад (10,5×15,5 м)</td>
+            <td>1056 × 1536 px</td>
+            <td>DAT, MPG, VOB, TS</td>
+            <td>30 fps</td>
+            <td>PNG, JPEG, GIF, BMP</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Коротко о важном</span>
+      <h2>Частые вопросы</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q">Сколько стоит реклама на экранах в парке?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Цена зависит от экрана, частоты и длительности размещения. Оставьте заявку — подготовим персональное предложение.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Как быстро начнётся показ?<span class="icon">+</span></button>
+        <div class="faq-a"><p>В обычном режиме — в течение 24 часов.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Как убедиться, что реклама действительно идёт в эфире?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Присылаем фотоотчёт в режиме реального времени с экрана в парке.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Можно изменить рекламу после запуска?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Да, замена контента происходит быстро.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Свяжитесь с нами</span>
+        <h2>Разместим рекламу в Парке Победы</h2>
+        <p class="lead">Оставьте заявку — подберём экран и покажем, как будет выглядеть ваш ролик или изображение на месте.</p>
+        <div class="contact-channels">
+          <div class="channel"><span class="dot"></span> <a class="copy-link" href="tel:+79054141155" data-tooltip="Скопировать номер">+7 (905) 414-11-55</a></div>
+          <div class="channel"><span class="dot"></span> <a class="copy-link open-mail" href="mailto:vparks26@gmail.com" data-tooltip="Написать письмо">vparks26@gmail.com</a></div>
+          <div class="channel"><span class="dot"></span> Telegram / WhatsApp / MAX — по тому же номеру</div>
+        </div>
+      </div>
+      <form class="form-card" id="leadForm" onsubmit="return sendToGmail(event);">
+        <label for="fname">Имя</label>
+        <input id="fname" type="text" placeholder="Как к вам обращаться" required>
+        <label for="fphone">Телефон</label>
+        <input id="fphone" type="tel" placeholder="+7 (___) ___-__-__" required>
+        <label for="fscreen">Интересующий экран</label>
+        <select id="fscreen">
+          <option>Экран на входе (ул. Шпаковская)</option>
+          <option>Сеть экранов на аллее и площади</option>
+          <option>Сити-формат (пилоны)</option>
+          <option>Все форматы сразу</option>
+        </select>
+        <button class="btn btn-primary" type="submit">Оставить заявку</button>
+        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</div><!-- /page-screens -->
+
+<div class="page" id="page-benches">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Наружная реклама · Лавочки в парках</span>
+      <h1>Реклама там, где <em>останавливаются, а не проходят мимо</em></h1>
+      <p class="lead">Брендированные лавочки в Парке Победы и Центральном парке Ставрополя. Пока посетитель отдыхает, читает или ждёт — ваша реклама рядом дольше, чем на любом экране.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact-benches">Оставить заявку</a>
+        <a class="btn btn-ghost" href="#locations-benches">Смотреть локации</a>
+      </div>
+      <div class="hero-stats">
+        <div><span class="num">2</span><span class="lbl">парка города</span></div>
+        <div><span class="num">2</span><span class="lbl">формата размещения</span></div>
+        <div><span class="num">24/7</span><span class="lbl">реклама на месте</span></div>
+        <div><span class="num">10 мин</span><span class="lbl">до старта размещения</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 520 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Иллюстрация лавочки с рекламной табличкой в парке">
+        <defs>
+          <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#F2A93B" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#F2A93B" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1F362C"/>
+            <stop offset="100%" stop-color="#17261F"/>
+          </linearGradient>
+        </defs>
+        <rect width="520" height="460" fill="url(#sky2)" rx="18"/>
+        <circle cx="120" cy="90" r="100" fill="url(#glow2)"/>
+        <!-- alley path -->
+        <path d="M0 300 Q170 260 260 300 Q360 340 520 300" stroke="#2A4237" stroke-width="3" fill="none" stroke-dasharray="4 10" opacity="0.6"/>
+        <!-- trees -->
+        <g fill="#26402F">
+          <ellipse cx="60" cy="180" rx="34" ry="46"/>
+          <ellipse cx="450" cy="150" rx="30" ry="40"/>
+          <ellipse cx="480" cy="240" rx="22" ry="30"/>
+          <ellipse cx="30" cy="260" rx="20" ry="26"/>
+        </g>
+        <!-- bench 1 -->
+        <g transform="translate(150,330)">
+          <rect x="-70" y="0" width="140" height="10" rx="3" fill="#3A5245"/>
+          <rect x="-64" y="-46" width="128" height="14" rx="3" fill="#3A5245"/>
+          <rect x="-58" y="10" width="10" height="34" fill="#25402F"/>
+          <rect x="48" y="10" width="10" height="34" fill="#25402F"/>
+          <rect x="-42" y="-42" width="84" height="30" rx="3" fill="#0F1B15" stroke="#F2A93B" stroke-width="1.5"/>
+          <rect x="-37" y="-37" width="74" height="20" rx="2" fill="#F2A93B" opacity="0.9"/>
+        </g>
+        <!-- bench 2, smaller / farther -->
+        <g transform="translate(370,300)">
+          <rect x="-46" y="0" width="92" height="7" rx="2" fill="#3A5245"/>
+          <rect x="-42" y="-30" width="84" height="9" rx="2" fill="#3A5245"/>
+          <rect x="-38" y="7" width="7" height="22" fill="#25402F"/>
+          <rect x="31" y="7" width="7" height="22" fill="#25402F"/>
+          <rect x="-27" y="-27" width="54" height="19" rx="2" fill="#0F1B15" stroke="#F2A93B" stroke-width="1.2"/>
+          <rect x="-23" y="-24" width="46" height="13" rx="1.5" fill="#F2A93B" opacity="0.85"/>
+        </g>
+        <!-- ground -->
+        <rect x="0" y="380" width="520" height="80" fill="#0F1B15"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="path-section" id="locations-benches">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Два парка — одна сеть</span>
+      <h2>Реклама на лавочках парка</h2>
+      <p>Размещаем рекламные таблички и брендирование на лавочках вдоль центральных аллей — там, где люди задерживаются на несколько минут, а не проходят транзитом.</p>
+    </div>
+
+    <div class="stops">
+      <div class="stop-card">
+        <span class="stop-tag">Парк № 1</span>
+        <h3>Парк Победы</h3>
+        <ul class="spec-list">
+          <li><span>Зона размещения</span><span>Центральная аллея</span></li>
+          <li><span>Рядом с</span><span>Аттракционами, зонами отдыха</span></li>
+          <li><span>Формат</span><span>Табличка / полная лавочка</span></li>
+          <li><span>Доступность</span><span>Круглосуточно</span></li>
+        </ul>
+        <a class="mini-btn" href="#contact-benches">Разместить рекламу →</a>
+      </div>
+      <div class="stop-card">
+        <span class="stop-tag">Парк № 2</span>
+        <h3>Центральный парк</h3>
+        <ul class="spec-list">
+          <li><span>Зона размещения</span><span>Прогулочные аллеи</span></li>
+          <li><span>Рядом с</span><span>Зонами отдыха, детскими площадками</span></li>
+          <li><span>Формат</span><span>Табличка / полная лавочка</span></li>
+          <li><span>Доступность</span><span>Круглосуточно</span></li>
+        </ul>
+        <a class="mini-btn" href="#contact-benches">Разместить рекламу →</a>
+      </div>
+    </div>
+
+    <div class="bonus-note">
+      <span>＋</span>
+      <div><b>Можно занять сразу оба парка</b> — так реклама охватывает и посетителей Парка Победы, и жителей, которые гуляют в Центральном парке, без пересечения аудитории.</div>
+    </div>
+  </div>
+</section>
+
+<section class="advantages" id="advantages-benches">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Почему лавочки работают</span>
+      <h2>Реклама, у которой есть время на контакт</h2>
+    </div>
+    <div class="adv-grid">
+      <div class="adv-cell">
+        <div class="adv-num">01</div>
+        <h3>Долгий визуальный контакт</h3>
+        <p>Человек сидит на лавочке несколько минут — гораздо дольше, чем длится показ на экране.</p>
+      </div>
+      <div class="adv-cell">
+        <div class="adv-num">02</div>
+        <h3>Работает все время работы парка</h3>
+        <p>В отличие от экранов с эфирным временем, табличка на лавочке видна и днём, и вечером, без перерывов.</p>
+      </div>
+      <div class="adv-cell">
+        <div class="adv-num">03</div>
+        <h3>Локальный охват</h3>
+        <p>Лавочки в парке своего района — точный способ достучаться до соседей и жителей ближайших кварталов.</p>
+      </div>
+      <div class="adv-cell">
+        <div class="adv-num">04</div>
+        <h3>Доступная цена входа</h3>
+        <p>Размещение на лавочке дешевле экрана — хороший формат для локального и небольшого бизнеса.</p>
+      </div>
+      <div class="adv-cell">
+        <div class="adv-num">05</div>
+        <h3>Заметно на уровне глаз</h3>
+        <p>Табличка на спинке лавочки находится в зоне естественного взгляда прохожих и сидящих рядом.</p>
+      </div>
+      <div class="adv-cell">
+        <div class="adv-num">06</div>
+        <h3>Необычно решение</h3>
+        <p>Реклама на лавочках мало где используется, поэтому будет запоминатся лучше.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="steps-benches">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Как это устроено</span>
+      <h2>Четыре шага до размещения на лавочке</h2>
+    </div>
+    <div class="steps-list">
+      <div class="step-row">
+        <div class="step-idx">01</div>
+        <div>
+          <h3>Заявка и выбор парка</h3>
+          <p>Оставляете контакты — подбираем лавочки в Парке Победы, Центральном парке или сразу в обоих.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-idx">02</div>
+        <div>
+          <h3>Договор</h3>
+          <p>Согласовываем количество лавочек, формат и срок размещения, заключаем договор.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-idx">03</div>
+        <div>
+          <h3>Макет таблички</h3>
+          <p>Присылаете свой дизайн — либо мы разработаем табличку или брендирование лавочки под ваш бренд.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-idx">04</div>
+        <div>
+          <h3>Установка и фотоотчёт</h3>
+          <p>Размещаем табличку на выбранных лавочках и присылаем фотоотчёт с готовым результатом.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="techspecs" id="specs-benches">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Форматы размещения</span>
+      <h2>Табличка или полная лавочка</h2>
+    </div>
+    <p class="section-lead">Выбирайте формат под задачу — от компактной таблички до полного брендирования лавочки в фирменных цветах.</p>
+    <div class="table-scroll">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>Формат</th>
+            <th>Расположение</th>
+            <th>Материал</th>
+            <th>Срок размещения</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Табличка на спинке</td>
+            <td>Спинка лавочки</td>
+            <td>Влагостойкий винил / пластик</td>
+            <td>От 1 месяца</td>
+          </tr>
+          <tr>
+            <td>Полное брендирование</td>
+            <td>Вся лавочка целиком</td>
+            <td>Износостойкое покрытие</td>
+            <td>От 3 месяцев</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq-benches">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Коротко о важном</span>
+      <h2>Частые вопросы</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Сколько стоит размещение на лавочке?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Цена зависит от парка, формата и количества лавочек. Оставьте заявку — подготовим предложение под ваш бюджет.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Можно разместиться сразу в двух парках?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Да, лавочки можно занять и в Парке Победы, и в Центральном парке — одновременно или по отдельности.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Нужно ли готовить макет самостоятельно?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Нет, можно прислать готовый дизайн или заказать разработку таблички у нас.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Как долго держится реклама на лавочке?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Минимальный срок размещения — от месяца, для полного брендирования — от трёх месяцев.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Как узнать, что табличка установлена?<span class="icon">+</span></button>
+        <div class="faq-a"><p>После установки присылаем фотоотчёт с готовым результатом на месте.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact-benches">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Свяжитесь с нами</span>
+        <h2>Разместим рекламу на лавочках</h2>
+        <p class="lead">Оставьте заявку — подберём парк и лавочки, покажем, как будет выглядеть табличка с вашим брендом.</p>
+        <div class="contact-channels">
+          <div class="channel"><span class="dot"></span> <a class="copy-link" href="tel:+79054141155" data-tooltip="Скопировать номер">+7 (905) 414-11-55</a></div>
+          <div class="channel"><span class="dot"></span> <a class="copy-link open-mail" href="mailto:vparks26@gmail.com" data-tooltip="Написать письмо">vparks26@gmail.com</a></div>
+          <div class="channel"><span class="dot"></span> Telegram / WhatsApp / MAX — по тому же номеру</div>
+        </div>
+      </div>
+      <form class="form-card" id="benchForm" onsubmit="return sendBenchToGmail(event);">
+        <label for="bname">Имя</label>
+        <input id="bname" type="text" placeholder="Как к вам обращаться" required>
+        <label for="bphone">Телефон</label>
+        <input id="bphone" type="tel" placeholder="+7 (___) ___-__-__" required>
+        <label for="bpark">Парк</label>
+        <select id="bpark">
+          <option>Парк Победы</option>
+          <option>Центральный парк</option>
+          <option>Оба парка</option>
+        </select>
+        <label for="bformat">Формат</label>
+        <select id="bformat">
+          <option>Табличка на спинке</option>
+          <option>Полное брендирование лавочки</option>
+        </select>
+        <button class="btn btn-primary" type="submit">Оставить заявку</button>
+        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</div><!-- /page-benches -->
+
+</div><!-- /pages-wrap -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
